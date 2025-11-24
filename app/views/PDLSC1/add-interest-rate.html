@@ -1,0 +1,132 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+
+
+<header data-module="govuk-header" class="dwp-header">
+  <div class="dwp-header__content govuk-width-container">
+    <div class="dwp-header__service-name">
+      <a href="#" class="dwp-header__link">Pension Lump Sum Calculator</a>
+    </div>
+    <nav class="dwp-header-navigation"
+      aria-label="Primary">
+      
+      <ul id="navigation" class="dwp-header-navigation__list">
+        <li class="dwp-header-navigation__item">
+          <a
+            href="/PDLSC1/find-someone">
+           Find Someone
+          </a>
+        </li>
+        <li class="dwp-header-navigation__item">
+          <a
+            href="/PDLSC1/interest-rate">
+           Manage Interest Rates
+          </a>
+        </li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="govuk-phase-banner govuk-width-container">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service - your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+<div class="govuk-width-container">
+<a href="#" class="govuk-back-link" onclick="history.back()">Back</a>
+</div>
+{% endblock %}
+
+{% block content %}
+
+
+
+
+<h1 class="govuk-heading-l">Add Interest Rate</h1>
+
+
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+      <legend class="govuk-fieldset__legend">
+       From date
+      </legend>
+
+      <div class="govuk-date-input" id="passport-issued">
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+              Day
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day"
+              name="passport-issued-day" type="text" inputmode="numeric">
+          </div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+              Month
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month"
+              name="passport-issued-month" type="text" inputmode="numeric">
+          </div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+              Year
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year"
+              name="passport-issued-year" type="text" inputmode="numeric">
+          </div>
+        </div>
+        <div id="passport-issued-hint" class="govuk-hint">
+          dd/mm/yyyy
+        </div>
+      </div>
+    </fieldset>
+
+    <br>
+
+    <div class="govuk-form-group">
+
+      <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+       Interest rate
+      </label>
+      <input class="govuk-input govuk-input--width-10" id="event-name" name="eventName" type="text">
+    </div>
+  </div>
+
+
+  <div class="govuk-button-group">
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Save
+    </button>
+    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Cancel
+    </button>
+
+  </div>
+
+
+
+
+
+
+
+
+
+{% endblock %}

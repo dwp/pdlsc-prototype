@@ -1,0 +1,142 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+      Accessibility Statement
+    </h1>
+
+    <p>
+      This website is run by the Department of Work and Pensions (DWP). We want as many people as possible to be able to
+      use this website. For example that means you should be able to:
+    </p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>change colours, contrast levels and fonts</li>
+      <li>zoom in up to 300% without the text spilling off the screen</li>
+      <li>navigate most of the website using just a keyboard</li>
+    </ul>
+    <p>
+      We've also made the website text as simple as possible to understand.
+    </p>
+
+    <p>
+      <a class="govuk-link" href="#">AbilityNet</a> has advice on making your device easier to use if you have a disability.
+    </p>
+
+    <h3 class="govuk-heading-s">
+      The accessibility of this website
+    </h3>
+
+    <p>
+      We know some parts of this website are not fully accessible:
+    </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>not all text and icons have sufficient colour contrast between the text or icon and background
+        colour </li>
+      <li>not all input fields have hint text</li>
+    </ul>
+
+    <p>
+      We carry out a range of accessibility tests, including AXE-core testing. This software automatically tests web
+      applications and websites to highlight potential accessibility issues. The issues we found are:
+    </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>some pages have poor colour contrast</li>
+      <li>some of the code is incorrectly labelled, located or duplicated</li>
+      <li>some page elements are incorrectly labelled in the code. These include:<ul
+          class="govuk-list govuk-list--bullet">
+          <li>error messages</li>
+          <li>buttons</li>
+          <li>tabs</li>
+          <li>input fields</li>
+          <li>headers</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2 class="govuk-heading-m">
+      Technical information about this website's accessibility
+    </h2>
+
+    <p>
+      DWP is committed to making its website accessible, in accordance with the Public Sector Bodies (Websites and
+      Mobile Applications)(No.2)Accessibility Regulations 2018.
+    </p>
+
+    <p>
+      This website is partially compliant with the <a class="govuk-link" href="#">Web Content Accessibility Guidlines version 2.1</a> AA standard, due to
+      the non-compliance listed below.
+    </p>
+
+    <h2 class="govuk-heading-m">
+      Non-compliance with the accessibility regulations
+    </h2>
+
+    <p>
+      This website has been tested using manual WCAG testing and automated testing using AXE. It has not been tested
+      using assistive technology tools. We plan to fully test the website for compliance, using assistive technology
+      tools by September 2021.
+    </p>
+
+    <h2 class="govuk-heading-m">
+      How we tested this website
+    </h2>
+
+    <p>
+      This website was last tested on 3 August July 2020. The accessibility testing was carried out by the
+      pre-retirement digital team at DWP.
+    </p>
+
+    <p>
+      We tested our website in full and it's available at <a class="govuk-link" href="#">https://pdlsc.agent-service.prod.rbcdwp.net/pdlsc</a>
+    </p>
+
+    <h2 class="govuk-heading-m">
+      What to do if you cannot access parts of this website
+    </h2>
+
+    <p>
+      Use TechNow to raise any issues.
+    </p>
+
+    <h2 class="govuk-heading-m">
+      Reporting accessibility problems with this website
+    </h2>
+
+    <p>
+      Use TechNow to raise any issues.
+    </p>
+
+    <h2 class="govuk-heading-m">
+      Enforcement procedure
+    </h2>
+
+    <p>
+    The Equality and Human Rights Commission (EHRC) is responsible for enforcing the Public Sector Bodies (Websites and Mobile Applications) (No.2) Accessibility Regulations 2018 (the 'accessibility regulations').
+    </p>
+
+    <p>
+   If you're not happy with how we respond to your complaint, contact the:
+    </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li><a class="govuk-link" href="#">Equality Advisory and Support Service (EASS)</a> if you live in England, Scotland or Wales</li>
+      <li><a class="govuk-link" href="#">Equality Commission for Northern Ireland (ECNI)</a> if you live in Northern Ireland</li>
+    </ul>
+
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,189 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-error-summary" data-module="govuk-error-summary">
+  <div role="alert">
+    <h2 class="govuk-error-summary__title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list">
+        <li>
+          <a href="#">Calculated retirement date must be before NSP cut off date 6/04/2016</a>
+        </li>
+         <li>
+          <a href="#">   Current calculated
+            retirement date based on customers Date of Birth is 06/09/2019</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</div>
+
+<h1 class="govuk-heading-l">
+  Calculate Pension Deferral Lump Sum
+</h1>
+
+
+
+<button type="submit" onclick="window.location.href='/PDLSC2/import'" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Import data
+</button>
+
+
+
+<hr class="govuk-section-break govuk-section-break--s">
+
+<fieldset class="govuk-fieldset">
+
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+    <h2 class="govuk-heading-m">
+  Customer Details
+    </h2>
+  </legend>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="national-insurance-number">
+      <b>National Insurance number</b>
+    </label>
+    <div id="national-insurance-number-hint" class="govuk-hint">
+      For example, ‘QQ 12 34 56 C’
+    </div>
+    <input class="govuk-input govuk-input--width-10 govuk-input--extra-letter-spacing" id="national-insurance-number"
+      name="nationalInsuranceNumber" type="text" spellcheck="false" aria-describedby="national-insurance-number-hint">
+  </div>
+
+  <div class="govuk-form-group">
+    <legend class="govuk-fieldset__legend">
+      <b>Gender</b>
+    </legend>
+    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="changedName">
+          Male
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="changedName-2">
+          Female
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="width-20">
+      <b>Surname</b>
+    </label>
+    <input class="govuk-input govuk-input--width-20" id="event-name" name="eventName" type="text">
+  </div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="width-20">
+      <b>Forename(s)</b>
+    </label>
+    <input class="govuk-input govuk-input--width-20" id="event-name" name="eventName" type="text">
+  </div>
+
+  <div class="govuk-form-group govuk-form-group--error">
+    <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+      <legend class="govuk-fieldset__legend">
+        <b>Date of Birth</b>
+      </legend>
+      <div id="passport-issued-hint" class="govuk-hint">
+        dd/mm/yyyy
+      </div>
+      <p id="passport-issued-error" class="govuk-error-message">
+        <span class="govuk-visually-hidden">Error:</span>
+        Calculated retirement date must be before NSP cut off date 6/04/2016
+      </p>
+       <p id="passport-issued-error" class="govuk-error-message">
+        <span class="govuk-visually-hidden">Error:</span>
+       Current calculated retirement date based
+        on customers Date of Birth is 06/09/2019
+
+      </p>
+      <div class="govuk-date-input" id="passport-issued">
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+              Day
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--error govuk-input--width-2"
+              id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+          </div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+              Month
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--error govuk-input--width-2"
+              id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+          </div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+              Year
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--error govuk-input--width-4"
+              id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+      <b>Customer pay day</b>
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="updated" selected>Select</option>
+    </select>
+  </div>
+
+  <div class="govuk-form-group">
+    <legend class="govuk-fieldset__legend">
+      <b>Is this a Transitional Protection Case?</b>
+    </legend>
+    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="changedName">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="changedName-2">
+          No
+        </label>
+      </div>
+    </div>
+  </div>
+
+</fieldset>
+
+
+
+
+<button type="submit" onclick="window.location.href='/PDLSC2/new-calc-lump'" class="govuk-button" data-module="govuk-button">
+ Continue
+</button>
+
+
+
+
+
+
+{% endblock %}

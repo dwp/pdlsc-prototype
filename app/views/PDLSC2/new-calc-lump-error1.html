@@ -1,0 +1,163 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-error-summary" data-module="govuk-error-summary">
+  <div role="alert">
+    <h2 class="govuk-error-summary__title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list">
+        <li>
+          <a href="#">Period end date must be at least 12 months after the period start date</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<h1 class="govuk-heading-l">
+  Calculate Pension Deferral Lump Sum
+</h1>
+
+
+
+
+<hr class="govuk-section-break govuk-section-break--m">
+
+<fieldset class="govuk-fieldset">
+
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h2 class="govuk-heading-m">
+        Lump Sum Calculation Inputs
+      </h2>
+    </legend>
+
+    <div class="govuk-inset-text">
+      This section allows you to enter the information required to calculate the pension deferral
+      lump sum. Foregone cash value start dates must all be the same day of the week.
+
+    </div>
+
+
+
+<div class="govuk-form-group govuk-form-group--error">
+      <legend class="govuk-fieldset__legend">
+     <b>Period start date</b>
+    </legend>
+    <div id="passport-issued-hint" class="govuk-hint">
+      dd/mm/yyyy
+    </div>
+      <p id="passport-issued-error" class="govuk-error-message">
+        <span class="govuk-visually-hidden">Error:</span> Period end date must be at least 12 months after the period start date
+      </p>
+      <div class="govuk-date-input" id="passport-issued">
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+              Day
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2 govuk-input--error"
+              id="passport-issued-day" name="passport-issued-day" type="text" value="6" inputmode="numeric">
+          </div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+              Month
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2 govuk-input--error"
+              id="passport-issued-month" name="passport-issued-month" type="text" value="3" inputmode="numeric">
+          </div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+              Year
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-4 govuk-input--error"
+              id="passport-issued-year" name="passport-issued-year" type="text" value="2076" inputmode="numeric">
+          </div>
+        </div>
+      </div>
+    </div>
+
+   <div class="govuk-form-group govuk-form-group--error">
+      <legend class="govuk-fieldset__legend">
+     <b>Period end date</b>
+    </legend>
+    <div id="passport-issued-hint" class="govuk-hint">
+      dd/mm/yyyy
+    </div>
+      <p id="passport-issued-error" class="govuk-error-message">
+        <span class="govuk-visually-hidden">Error:</span>Period end date must be at least 12 months after the period start date
+      </p>
+      <div class="govuk-date-input" id="passport-issued">
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+              Day
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2 govuk-input--error"
+              id="passport-issued-day" name="passport-issued-day" type="text" value="6" inputmode="numeric">
+          </div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+              Month
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2 govuk-input--error"
+              id="passport-issued-month" name="passport-issued-month" type="text" value="3" inputmode="numeric">
+          </div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+              Year
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-4 govuk-input--error"
+              id="passport-issued-year" name="passport-issued-year" type="text" value="2076" inputmode="numeric">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+     <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        <b>Calculation type</b>
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="updated" selected>Select</option>
+      </select>
+    </div>
+
+</fieldset>
+
+
+
+
+
+
+
+
+
+
+
+<button type="submit" onclick="window.location.href='/PDLSC2/new-calc-foregone'" class="govuk-button"
+  data-module="govuk-button">
+  Continue
+</button>
+
+
+
+
+
+{% endblock %}

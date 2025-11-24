@@ -1,0 +1,154 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<h1 class="govuk-heading-l">Lump Sum Calculation Details
+</h1>
+
+<hr class="govuk-section-break govuk-section-break--m">
+
+<h2 class="govuk-heading-m">Personal Details</h2>
+
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Name
+    </dt>
+    <dd class="govuk-summary-list__value">
+     John Smith
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Date of birth
+    </dt>
+    <dd class="govuk-summary-list__value">
+     27 July 1929
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      National Insurance Number
+    </dt>
+    <dd class="govuk-summary-list__value">
+      QQ123456C
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Start date
+    </dt>
+    <dd class="govuk-summary-list__value">
+     01 October 2025
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      End date
+    </dt>
+    <dd class="govuk-summary-list__value">
+     31 December 2026
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Customers payday
+    </dt>
+    <dd class="govuk-summary-list__value">
+     Monday
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Created
+    </dt>
+    <dd class="govuk-summary-list__value">
+     17 October 2025
+    </dd>
+  </div>
+</dl>
+
+<hr class="govuk-section-break govuk-section-break--m">
+
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">Lump sum calculations</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Value</th>
+      <th scope="col" class="govuk-table__header govuk-table__header--numeric">Calculations</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Calculation Type</td>
+
+      <td class="govuk-table__cell govuk-table__cell--numeric">Projected</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">SP</td>
+
+      <td class="govuk-table__cell govuk-table__cell--numeric">£20.01</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">GRB</td>
+
+      <td class="govuk-table__cell govuk-table__cell--numeric">£10.00</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">SAP</td>
+
+      <td class="govuk-table__cell govuk-table__cell--numeric">£5.00</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">Total</td>
+
+      <td class="govuk-table__cell govuk-table__cell--numeric">£35.01</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr class="govuk-section-break govuk-section-break--m">
+
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">Foregone cash value</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Date</th>
+      <th scope="col" class="govuk-table__header govuk-table__header--numeric">SP</th>
+      <th scope="col" class="govuk-table__header govuk-table__header--numeric">GRB</th>
+      <th scope="col" class="govuk-table__header govuk-table__header--numeric">SAP</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td scope="row" class="govuk-table__cell">05 Oct 2027</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£20.00</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£10.00</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">£5.00</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr class="govuk-section-break govuk-section-break--m">
+
+ <button type="submit"  onclick="window.location.href='/PDLSC1/calc-saved'" class="govuk-button" data-module="govuk-button">
+    Save to Database
+  </button>
+
+<div class="govuk-button-group">
+  <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+    Recalculate
+  </button>
+  <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+    Search again
+  </button>
+</div>
+
+
+
+
+{% endblock %}

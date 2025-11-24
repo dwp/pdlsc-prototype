@@ -1,0 +1,157 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+<header data-module="govuk-header" class="dwp-header">
+  <div class="dwp-header__content govuk-width-container">
+    <div class="dwp-header__service-name">
+      <a href="#" class="dwp-header__link">Pension Lump Sum Calculator</a>
+    </div>
+    <nav class="dwp-header-navigation"
+      aria-label="Primary">
+      
+      <ul id="navigation" class="dwp-header-navigation__list">
+        <li class="dwp-header-navigation__item">
+          <a
+            href="/PDLSC1/find-someone">
+           Find Someone
+          </a>
+        </li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<div class="govuk-phase-banner govuk-width-container">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service - your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+
+{% endblock %}
+
+{% block content %}
+
+
+
+<h1 class="govuk-heading-l">Find someone</h1>
+
+<p class="govuk-body">To search for a historical deferral lump sum calculation you must either search by National
+  Insurance Number (NINo) OR Forename/Surname and Date of Birth.</p>
+
+<div class="govuk-tabs" data-module="govuk-tabs">
+  <h2 class="govuk-tabs__title">
+    Contents
+  </h2>
+  <ul class="govuk-tabs__list">
+    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+      <a class="govuk-tabs__tab" href="#past-day">
+        Search by NINo
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#past-week">
+        Search by name and date of birth
+      </a>
+    </li>
+  </ul>
+  <div class="govuk-tabs__panel" id="past-day">
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="national-insurance-number">
+        Search by National Insurance Number
+      </label>
+
+      <input class="govuk-input govuk-input--width-10 govuk-input--extra-letter-spacing" id="national-insurance-number"
+        name="nationalInsuranceNumber" type="text" spellcheck="false" aria-describedby="national-insurance-number-hint">
+    </div>
+    <button type="submit" onclick="window.location.href='/PDLSC1/find-someone-results'" class="govuk-button" data-module="govuk-button">
+      Search
+    </button>
+  </div>
+
+
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+    <p>You must complete all boxes unless they're marked with (optional).</p>
+    <div class="govuk-form-group">
+
+      <label class="govuk-label" for="width-20">
+        Surname
+      </label>
+      <div id="event-name-hint" class="govuk-hint">
+        Enter minimum two characters
+      </div>
+      <input class="govuk-input govuk-input--width-20" id="width-20" name="width20" type="text">
+
+
+
+      <div id="event-name-hint" style="color: white;" class="govuk-hint">
+        Enter minimum two characters
+      </div>
+      <label class="govuk-label" for="width-20">
+        Forename(s) (optional)
+      </label>
+
+      <input class="govuk-input govuk-input--width-20" id="width-20" name="width20" type="text">
+
+
+    </div>
+
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+        <legend class="govuk-fieldset__legend">
+          Date of Birth
+        </legend>
+        <div id="event-name-hint" class="govuk-hint">
+          dd/mm/yyyy
+        </div>
+        <div class="govuk-date-input" id="passport-issued">
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                Day
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day"
+                name="passport-issued-day" type="text" inputmode="numeric">
+            </div>
+          </div>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                Month
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month"
+                name="passport-issued-month" type="text" inputmode="numeric">
+            </div>
+          </div>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                Year
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year"
+                name="passport-issued-year" type="text" inputmode="numeric">
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <button type="submit" onclick="window.location.href='/PDLSC1/find-someone-results'" class="govuk-button" data-module="govuk-button">
+      Search
+    </button>
+  </div>
+</div>
+
+{% endblock %}

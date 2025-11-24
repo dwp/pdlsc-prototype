@@ -1,0 +1,163 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block header %}
+<header data-module="govuk-header" class="dwp-header">
+  <div class="dwp-header__content govuk-width-container">
+    <div class="dwp-header__service-name">
+      <a href="#" class="dwp-header__link">Pension Lump Sum Calculator</a>
+    </div>
+    <nav class="dwp-header-navigation"
+      aria-label="Primary">
+      
+      <ul id="navigation" class="dwp-header-navigation__list">
+        <li class="dwp-header-navigation__item">
+          <a
+            href="/PDLSC1/find-someone">
+           Find Someone
+          </a>
+        </li>
+        <li class="dwp-header-navigation__item">
+          <a
+            href="/PDLSC1/interest-rate">
+           Manage Interest Rates
+          </a>
+        </li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="govuk-phase-banner govuk-width-container">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service - your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+
+{% block content %}
+
+
+<h1 class="govuk-heading-l">Interest Rates</h1>
+
+<p>Previously set interest rates are displayed in the table below, you can manage interest rates by adding new rates and
+  deleting them.</p>
+
+<div class="govuk-inset-text">
+  Current interest rate is 2.5%, since 05 Mar 2009
+</div>
+
+<a class="govuk-link" href="/PDLSC1/add-interest-rate">Add interest rate</a>
+
+<hr class="govuk-section-break govuk-section-break--m">
+
+<table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">From date</th>
+      <th scope="col" class="govuk-table__header">To date</th>
+      <th scope="col" class="govuk-table__header govuk-table__header--numeric">Interest rate %</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">21 Nov 2025</td>
+      <td class="govuk-table__cell">14 Nov 2025</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">3.5</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">05 Mar 2009</td>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">2.5</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">05 Feb 2009</td>
+      <td class="govuk-table__cell">04 Mar 2009</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">3.0</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">08 Jan 2009</td>
+      <td class="govuk-table__cell">04 Feb 2009</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">3.5</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">04 Dec 2008</td>
+      <td class="govuk-table__cell">07 Jan 2009</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">4.0</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">06 Nov 2008</td>
+      <td class="govuk-table__cell">03 Dec 2008</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">5.0</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">08 Oct 2008</td>
+      <td class="govuk-table__cell">05 Nov 2008</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">6.5</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">14 Apr 2008</td>
+      <td class="govuk-table__cell">07 Oct 2008</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">7.0</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">11 Feb 2008</td>
+      <td class="govuk-table__cell">13 Apr 2008</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">7.25</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">10 Dec 2007</td>
+      <td class="govuk-table__cell">10 Feb 2008</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">7.5</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">05 Jul 2007</td>
+      <td class="govuk-table__cell">09 Dec 2007</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">7.75</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">14 May 2007</td>
+      <td class="govuk-table__cell">04 Jul 2007</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">7.5</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">15 Jan 2007</td>
+      <td class="govuk-table__cell">13 May 2007</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">7.25</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">13 Nov 2006</td>
+      <td class="govuk-table__cell">14 Jan 2007</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">7.0</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">07 Aug 2006</td>
+      <td class="govuk-table__cell">12 Nov 2006</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">6.75</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">08 Aug 2005</td>
+      <td class="govuk-table__cell">06 Aug 2006</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">6.5</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">03 Apr 2005</td>
+      <td class="govuk-table__cell">07 Aug 2005</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric">6.75</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+{% endblock %}

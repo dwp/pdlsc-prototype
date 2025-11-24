@@ -1,0 +1,64 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+<header data-module="govuk-header" class="dwp-header">
+  <div class="dwp-header__content govuk-width-container">
+    <div class="dwp-header__service-name">
+      <a href="#" class="dwp-header__link">Pension Lump Sum Calculator</a>
+    </div>
+    <nav class="dwp-header-navigation"
+      aria-label="Primary">
+      
+      <ul id="navigation" class="dwp-header-navigation__list">
+        <li class="dwp-header-navigation__item">
+          <a
+            href="/PDLSC2/find-someone">
+           Find Someone
+          </a>
+        </li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<div class="govuk-phase-banner govuk-width-container">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service - your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+
+{% endblock %}
+
+{% block content %}
+
+
+
+<h1 class="govuk-heading-l">Find someone</h1>
+
+
+
+ <div class="govuk-form-group">
+      <label class="govuk-label" for="national-insurance-number">
+        Search by National Insurance Number
+      </label>
+
+      <input class="govuk-input govuk-input--width-10 govuk-input--extra-letter-spacing" id="national-insurance-number"
+        name="nationalInsuranceNumber" type="text" spellcheck="false" aria-describedby="national-insurance-number-hint">
+    </div>
+    <button type="submit" onclick="window.location.href='/PDLSC2/find-someone-results'" class="govuk-button" data-module="govuk-button">
+      Find
+    </button>
+
+{% endblock %}

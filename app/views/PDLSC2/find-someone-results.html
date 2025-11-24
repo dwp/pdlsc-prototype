@@ -1,0 +1,122 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+<header data-module="govuk-header" class="dwp-header">
+  <div class="dwp-header__content govuk-width-container">
+    <div class="dwp-header__service-name">
+      <a href="#" class="dwp-header__link">Pension Lump Sum Calculator</a>
+    </div>
+    <nav class="dwp-header-navigation"
+      aria-label="Primary">
+      
+      <ul id="navigation" class="dwp-header-navigation__list">
+        <li class="dwp-header-navigation__item">
+          <a
+            href="/PDLSC2/find-someone">
+           Find Someone
+          </a>
+        </li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<div class="govuk-phase-banner govuk-width-container">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service - your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+
+{% endblock %}
+
+{% block content %}
+
+
+<section class="dwp-quick-reference" aria-label="Case information">
+  <dl class="dwp-quick-reference__block">
+    <dt class="dwp-quick-reference__label govuk-visually-hidden">Name:</dt>
+    <dd class="dwp-quick-reference__primary">Jane Doe</dd>
+    <dt class="dwp-quick-reference__label dwp-quick-reference__label--primary govuk-visually-hidden">National Insurance number:</dt>
+    <dd class="dwp-quick-reference__secondary">QQ 12 34 56 X</dd>
+    <dt class="dwp-quick-reference__label dwp-quick-reference__label--primary govuk-visually-hidden">Date of Birth:</dt>
+    <dd class="dwp-quick-reference__secondary">28 October 1939</dd>
+  </dl>
+</section>
+
+<hr class="govuk-section-break govuk-section-break--m ">
+
+<p class="govuk-body">View the historical lump sum calculation records, use the 'View Details' links to see full
+  details.</p>
+
+
+
+
+
+
+<table class="govuk-table govuk-table--small-text-until-tablet">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Created date</th>
+      <th scope="col" class="govuk-table__header">From date</th>
+      <th scope="col" class="govuk-table__header">To date</th>
+      <th scope="col" class="govuk-table__header">Amount</th>
+      <th scope="col" class="govuk-table__header">Type</th>
+      <th scope="col" class="govuk-table__header">Action</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">17 Oct 2025 </td>
+      <td class="govuk-table__cell">01 Oct 2025</td>
+      <td class="govuk-table__cell">31 Dec 2026</td>
+      <td class="govuk-table__cell">£155.07</td>
+      <td class="govuk-table__cell">Projected</td>
+      <td class="govuk-table__cell"><a href="/PDLSC2/historical-calc" class="govuk-link">View details</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">22 Oct 2025</td>
+      <td class="govuk-table__cell">01 Oct 2025</td>
+      <td class="govuk-table__cell">31 Dec 2026</td>
+      <td class="govuk-table__cell">£155.07</td>
+      <td class="govuk-table__cell">Projected</td>
+      <td class="govuk-table__cell"><a href="/PDLSC2/historical-calc" class="govuk-link">View details</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">22 Oct 2025</td>
+      <td class="govuk-table__cell">01 Oct 2025</td>
+      <td class="govuk-table__cell">31 Dec 2026</td>
+      <td class="govuk-table__cell">£255.12</td>
+      <td class="govuk-table__cell">Projected</td>
+      <td class="govuk-table__cell"><a href="/PDLSC2/historical-calc" class="govuk-link">View details</a></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+<div class="govuk-button-group">
+   <button type="submit" class="govuk-button" onclick="window.location.href='/PDLSC2/new-calc-details'" data-module="govuk-button">
+    New Calculation
+  </button>
+  <button type="submit" class="govuk-button govuk-button--secondary" onclick="window.location.href='/PDLSC2/find-someone'" data-module="govuk-button">
+    Search again
+  </button>
+</div>
+
+
+
+
+
+{% endblock %}

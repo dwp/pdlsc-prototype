@@ -1,0 +1,87 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  GOV.UK page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+<header data-module="govuk-header" class="dwp-header">
+  <div class="dwp-header__content govuk-width-container">
+    <div class="dwp-header__service-name">
+      <a href="#" class="dwp-header__link">Pension Lump Sum Calculator</a>
+    </div>
+    <nav class="dwp-header-navigation"
+      aria-label="Primary">
+      
+      <ul id="navigation" class="dwp-header-navigation__list">
+        <li class="dwp-header-navigation__item">
+          <a
+            href="/PDLSC2/find-someone">
+           Find Someone
+          </a>
+        </li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<div class="govuk-phase-banner govuk-width-container">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service - your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-error-summary" data-module="govuk-error-summary">
+  <div role="alert">
+    <h2 class="govuk-error-summary__title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list">
+        <li>
+          <a href="#">Enter a National Insurance Number in a valid format
+    </p></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<h1 class="govuk-heading-l">Find someone</h1>
+
+
+
+
+   <div class="govuk-form-group govuk-form-group--error">
+      <label class="govuk-label" for="national-insurance-number">
+        Search for NINo
+      </label>
+  <p id="passport-issued-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span> Enter a National Insurance Number in a valid format
+    </p>
+      <input class="govuk-input govuk-input--width-20 govuk-input--error govuk-input--extra-letter-spacing" id="national-insurance-number"
+        name="nationalInsuranceNumber" type="text" spellcheck="false" aria-describedby="national-insurance-number-hint">
+      <div id="national-insurance-number-hint" class="govuk-hint">
+        For example, ‘QQ 12 34 56 C’
+      </div>
+    </div>
+    <button type="submit" onclick="window.location.href='/PDLSC2/find-someone-results'" class="govuk-button" data-module="govuk-button">
+      Search
+    </button>
+  </div>
+
+
+  
+{% endblock %}
