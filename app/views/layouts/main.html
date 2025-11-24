@@ -8,9 +8,56 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 
 {% block header %}
 
-    {{ govukHeader() }}
-    {{ govukServiceNavigation({
-        serviceName: serviceName
-    })}}
+<header data-module="govuk-header" class="dwp-header">
+  <div class="dwp-header__content govuk-width-container">
+    <div class="dwp-header__service-name">
+      <a href="#" class="dwp-header__link">Pension Lump Sum Calculator</a>
+    </div>
+    <nav class="dwp-header-navigation"
+      aria-label="Primary">
+      
+      <ul id="navigation" class="dwp-header-navigation__list">
+        <li class="dwp-header-navigation__item">
+          <a
+            href="/find-someone">
+           Find Someone
+          </a>
+        </li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
 
+
+<div class="govuk-phase-banner govuk-width-container">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service - your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+  <div class="govuk-width-container">
+<a href="#" class="govuk-back-link" onclick="history.back()">Back</a>
+</div>
+{% endblock %}
+
+
+{% block footer %}
+<footer class="dwp-footer">
+  <div class="govuk-width-container">
+    <h2 class="govuk-visually-hidden">About this website</h2>
+    <ul class="dwp-footer__inline-list">
+      <li class="dwp-footer__inline-list-item">
+        <a class="dwp-footer__link" href="/accessibility-statement">Accessibility statement</a>
+      </li>
+      <li class="dwp-footer__inline-list-item">
+        <a class="dwp-footer__link" href="">Privacy</a>
+      </li>
+    </ul>
+  </div>
+</footer>
 {% endblock %}

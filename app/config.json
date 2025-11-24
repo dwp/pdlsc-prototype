@@ -1,5 +1,5 @@
 {
-  "serviceName": "Service name goes here",
+  "serviceName": "Pension Deferral Lump Sum Calculator",
   "plugins": {
     "govuk-frontend": {
       "rebrand": true
